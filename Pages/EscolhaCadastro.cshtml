@@ -1,0 +1,56 @@
+﻿@page
+@model Eco_life.Pages.CadastrarModel
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Criação de conta</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <h1>Criar uma conta</h1>
+    <form method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required /><br />
+
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required /><br />
+
+        <label for="senha">Senha:</label>
+        <input type="number" name="senha" required /><br />
+
+        <label for="cpf">CPF:</label>
+        <input type="number" name="cpf" required /><br />
+
+
+        <button type="submit">Criar conta</button>
+    </form>
+</body>
+</html>
+
+<style>
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #538f5d; /* Cor de fundo verde */
+        color: white; /* Texto branco */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        /* Adiciona um efeito ao passar o mouse sobre o botão */
+        button:hover {
+            background-color: #6bb377; /* Cor de fundo verde mais escura */
+        }
+
+</style>
+
+</html>
+
+

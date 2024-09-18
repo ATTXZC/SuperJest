@@ -1,0 +1,8 @@
+C:\Users\021.898689\Downloads\Eco_life_up-master\Eco_life_up-master\Eco_life\obj\Debug\net8.0\Eco_life.csproj.AssemblyReference.cache
+C:\Users\021.898689\Downloads\Eco_life_up-master\Eco_life_up-master\Eco_life\obj\Debug\net8.0\Eco_life.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\021.898689\Downloads\Eco_life_up-master\Eco_life_up-master\Eco_life\obj\Debug\net8.0\Eco_life.AssemblyInfoInputs.cache
+C:\Users\021.898689\Downloads\Eco_life_up-master\Eco_life_up-master\Eco_life\obj\Debug\net8.0\Eco_life.AssemblyInfo.cs
+C:\Users\021.898689\Downloads\Eco_life_up-master\Eco_life_up-master\Eco_life\obj\Debug\net8.0\Eco_life.csproj.CoreCompileInputs.cache
+C:\Users\021.898689\Downloads\Eco_life_up-master\Eco_life_up-master\Eco_life\obj\Debug\net8.0\Eco_life.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\021.898689\Downloads\Eco_life_up-master\Eco_life_up-master\Eco_life\obj\Debug\net8.0\Eco_life.RazorAssemblyInfo.cache
+C:\Users\021.898689\Downloads\Eco_life_up-master\Eco_life_up-master\Eco_life\obj\Debug\net8.0\Eco_life.RazorAssemblyInfo.cs
