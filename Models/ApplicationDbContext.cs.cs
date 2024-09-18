@@ -1,15 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Eco_life.Models;
-using System.Collections.Generic;
 
 namespace Eco_life.Models
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
         {
         }
-        public DbSet<Cadastros> Cadastro { get; set; }
+
+        public DbSet<Cadastros> Cadastros { get; set; }
+        public DbSet<Produtos> Produtos { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
+
         internal bool TestConnection()
         {
             throw new NotImplementedException();

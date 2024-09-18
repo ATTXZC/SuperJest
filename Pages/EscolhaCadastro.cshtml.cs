@@ -1,30 +1,33 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Eco_life.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.RazorPages;
+    using Eco_life.Models;
 
-
-
-namespace Eco_life.Pages
-{
-    public class CadastrarModel : PageModel
+    namespace Eco_life.Pages
     {
-        private readonly ApplicationDbContext _context;
-        public CadastrarModel(ApplicationDbContext context)
+        public class EscolhaCadastroModel : PageModel
         {
-            _context = context;
-        }
-        [BindProperty]
-        public Cadastros Cadastros { get; set; }
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
+            private readonly ApplicationDbContext _context;
+
+            public EscolhaCadastroModel(ApplicationDbContext context)
             {
-                return Page();
+                _context = context;
             }
 
-            _context.Cadastro.Add(Cadastros);
-            _context.SaveChanges();
-            return RedirectToPage("./Index");
+            [BindProperty]
+            public EscolhaUsuario Escolha { get; set; } = new EscolhaUsuario();
+
+            public IActionResult OnPost()
+            {
+                if (Escolha.TipoCadastro == "Usuario")
+                {
+                    return RedirectToPage("/CadastrarUsuario");
+                }
+                else if (Escolha.TipoCadastro == "Fornecedor")
+                {
+                    return RedirectToPage("/CadastrarFornecedor");
+                }
+
+                return Page();
+            }
         }
     }
-}

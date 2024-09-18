@@ -1,12 +1,70 @@
-﻿
-@page
-@model IndexModel
+﻿@page
+@model Eco_life.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
+    Layout = "_Layout";
 }
 
 <div class="text-center">
-    <img class="hom" img src="~/img/Oce.png" alt="exemplo" />
+    <img class="hom" src="~/img/Oce.png" alt="exemplo" />
 </div>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248902.4263433637!2d-38.715571225959344!3d-12.901264493908021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716112050422ebd%3A0xf71c84369573db9d!2sSalvador%2C%20BA!5e0!3m2!1spt-PT!2sbr!4v1726078236020!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<h2>Bem-vindo ao Eco_life</h2>
+<p>Escolha uma das opções abaixo para se cadastrar ou fazer login:</p>
+
+<ul>
+    <li><a href="/EscolhaCadastro">Cadastro</a></li>
+    <li><a href="/EscolhaLogin">Login</a></li>
+</ul>
+
+<h2>Lista de Cadastros</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>CPF</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cadastro in Model.Cadastros)
+        {
+            <tr>
+                <td>@cadastro.ID_User</td>
+                <td>@cadastro.Nome_User</td>
+                <td>@cadastro.Email_User</td>
+                <td>@cadastro.CPF</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Lista de Produtos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome do Produto</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model.Produtos)
+        {
+            <tr>
+                <td>@produto.ID_Produtos</td>
+                <td>@produto.Nome_Produto</td>
+                <td>@produto.preco_produto</td>
+                <td>@produto.Estoque</td>
+                <td>@produto.Categoria</td>
+                <td>@produto.descricao</td>
+            </tr>
+        }
+    </tbody>
+</table>

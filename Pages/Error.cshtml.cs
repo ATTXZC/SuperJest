@@ -24,5 +24,4 @@ namespace Eco_life.Pages
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }
-
 }

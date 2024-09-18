@@ -1,20 +1,26 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
+using Eco_life.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Eco_life.Pages
 {
     public class LojaModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<LojaModel> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public LojaModel(ILogger<IndexModel> logger)
+        public LojaModel(ILogger<LojaModel> logger, ApplicationDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
-        public void OnGet()
-        {
+        public IList<Produtos> Produtos { get; set; } = new List<Produtos>();
 
+        public async Task OnGetAsync()
+        {
+            Produtos = await _context.Produtos.ToListAsync();
         }
     }
 }

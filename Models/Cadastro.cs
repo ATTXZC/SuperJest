@@ -1,14 +1,25 @@
-﻿namespace Eco_life.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Eco_life.Models
 {
     public class Cadastros
     {
-        public int Id { get; set; }
+        [Key]
+        public int ID_User { get; set; }
 
-        public string nome { get; set; }
-        public string email { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string? Nome_User { get; set; }
 
-        public string senha { get; set; }
-        public int cpf { get; set; }
+        [Required] 
+        [MaxLength(100)]
+        public string? Email_User { get; set; }
 
+        [Required]
+        [MaxLength(100)]
+        public string? Senha_User { get; set; }
+
+        [Required]
+        public int CPF { get; set; }
     }
 }
