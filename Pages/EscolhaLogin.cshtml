@@ -1,0 +1,21 @@
+@page
+@model Eco_life.Pages.Pages_EscolhaLogin
+@{
+    ViewData["Title"] = "Escolher Tipo de Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolha o Tipo de Login</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <h1>Escolha o Tipo de Login</h1>
+    <form method="post">
+        <button type="submit" name="TipoLogin" value="Usuario">Login como Usuário</button>
+        <button type="submit" name="TipoLogin" value="Funcionario">Login como Funcionário</button>
+    </form>
+</body>
+</html>

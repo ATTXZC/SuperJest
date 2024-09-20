@@ -1,0 +1,21 @@
+﻿@page
+@model Eco_life.Pages.Pages_EscolhaCadastro
+@{
+    ViewData["Title"] = "Escolher Tipo de Cadastro";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolha o Tipo de Cadastro</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <h1>Escolha o Tipo de Cadastro</h1>
+    <form method="post">
+        <button type="submit" name="TipoCadastro" value="Usuario">Cadastrar como Usuário</button>
+        <button type="submit" name="TipoCadastro" value="Fornecedor">Cadastrar como Fornecedor</button>
+    </form>
+</body>
+</html>
